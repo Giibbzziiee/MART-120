@@ -1,0 +1,7 @@
+﻿Ethan Gibson
+Michael Cassens
+Creative Coding 1
+GUI vs. CLI
+
+
+From my basic understanding, the Graphical User Interface (GUI) is a form of user interface that a user can interact with, which includes pictures and icons. The GUI is controlled by the central processing unit, and made visible by the graphics processing unit. Graphics processing units (GPUs) vary in power, providing the computer with the ability to do far more intensive graphical computations for applications such as video games and 3D rendering softwares. The Command Line Interface (CLI) however is an interface that users interact with through text, that allows them to directly communicate with the computers operating system (OS). The command line will vary in commands from OS to OS, but generally remain the same in it’s use. Having a solid understanding of the command line interface for a specific OS will allow a user to navigate their computer in a much more in depth manner.
