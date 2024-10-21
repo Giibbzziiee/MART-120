@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <style>
+        .error {
+            border: 2px solid red;
+        }
+    </style>
+
+    <script>
+        function validateForm(event) {
+            var name = document.getElementById('name');
+            var email = document.getElementById('email');
+            var termsYes = document.getElementById('yes');
+            var termsNo = document.getElementById('no');
+
+            name.classList.remove('error');
+            email.classList.remove('error');
+            termsYes.classList.remove('error');
+            termsNo.classList.remove('error');
+
+            var valid=true;
+
+            if (name.value.trim() === "") {
+                name.classList.add('error');
+                name.focus();
+                event.preventDefault();
+                return false;
+            }
+
+            if (email.value.trim() === "") {
+                email.classList.add('error');
+                email.focus();
+                event.preventDefault();
+                return false;
+            }
+
+            if (!termsYes.checked && !termsNo.checked) {
+                termsYes.classList.add('error');
+                termsNo.classList.add('error');
+                termsYes.focus();
+                event.preventDevault();
+                return false;
+            }
+        }
+
+        window.onload=function() {
+            var form = document.querySelector('form');
+            form.addEventListener('submit', validateForm);
+        };
+    </script>
+</head>
+<body>
+    <h1 id="title">Contact Us</h1>
+
+    <form action="submit_form.php" method="post" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="terms">Do you accept the terms of agreement?</label><br>
+        <input type="radio" id="yes" name="terms" value="yes">
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="terms" value="no">
+        <label for="no">No</label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <nav>
+        <a href="homepage.html">Go to Homepage</a> |
+        <a href="secondpage.html">Go to Second Page</a>
+    </nav>
+</body>
+</html>
